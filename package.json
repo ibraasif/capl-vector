@@ -1,0 +1,26 @@
+{
+    "name": "capl-vector",
+    "displayName": "CAPL",
+    "description": "Language Support for CAPL Script in VSCode.",
+    "version": "0.0.1",
+    "publisher": "kmasif",
+    "engines": {
+        "vscode": "^1.25.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "capl",
+            "aliases": ["Communication Access Programming Language (CAPL)", "capl"],
+            "extensions": [".can",".cin"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "capl",
+            "scopeName": "source.capl",
+            "path": "./syntaxes/capl.tmLanguage.json"
+        }]
+    }
+}
