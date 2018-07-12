@@ -1,7 +1,7 @@
 {
     "name": "capl-vector",
     "displayName": "CAPL",
-    "description": "Language Support for CAPL Script in VSCode.",
+    "description": "Language Support for Vector CAPL Script in VS Code.",
     "version": "0.0.1",
     "publisher": "kmasif",
     "engines": {

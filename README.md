@@ -1,6 +1,6 @@
 # capl-vector README
 
-CAPL Support for VS Code. 
+CAPL Support for VS Code.
 
 ## Features
 
