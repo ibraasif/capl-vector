@@ -4,31 +4,205 @@
 	"name": "Communication Access Programming Language (CAPL)",
 
 	"patterns": [
+		
 		{
-			"include": "keywords"
+			"include": "#comments"
 		},
 		{
-			"include": "strings"
+			"include": "#keywords"
 		},
 		{
-			"include": "comments"
+			"include": "#numbers"
 		},
 		{
-			"include": "operators"
+			"include": "#operators"
 		},
 		{
-			"include": "numbers"
+			"include": "#storage_types"
 		},
 		{
-			"include": "brackets"
+			"include": "#strings"
 		},
 		{
-			"include": "function_declarations"
-		},
-		{
-			"include": "function_call"
+			"match": "\\bthis\\b",
+			"name": "variable.language.this.capl"			
 		}
+		
 	],
 	"repository": {
+		"comments":{
+			"patterns": [
+				{
+					"begin": "/\\*",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.comment.begin.capl"
+						}
+					},
+					"end": "\\*/",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.comment.end.capl"
+						}
+					},
+					"name": "comment.block.capl"
+				},
+				{
+					"match": "\\*/.*\\n",
+					"name": "invalid.illegal.stray-comment-end.capl"
+				},
+				{
+					"begin": "(^[ \\t]+)?(?=//)",
+					"beginCaptures": {
+						"1": {
+							"name": "punctuation.whitespace.comment.leading.capl"
+						}
+					},
+					"end": "(?!\\G)",
+					"patterns": [
+						{
+							"begin": "//",
+							"beginCaptures": {
+								"0": {
+									"name": "punctuation.definition.comment.capl"
+								}
+							},
+							"end": "(?=\\n)",
+							"name": "comment.line.double-slash.capl"
+						
+						}
+					]
+				}
+			]
+		},
+		"keywords":{
+			"patterns":[
+				{
+					"match": "\\b(break|case|continue|default|do|else|for|if|return|switch|while)\\b",
+					"name": "keyword.control.capl"
+				
+				},
+				{
+					"match": "\\b(#include|includes|on|start|variables)\\b",
+					"name": "keyword.other.capl"
+				},
+				{
+					"match": "\\b(message|multiplexed_message|diagRequest|diagResponse)\\b",
+					"name": "keyword.object.message.capl"
+				},
+				{
+					"match": "\\b(msTimer|timer)\\b",
+					"name": "keyword.object.timer.capl"
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [
+				{
+					"match": "\\b((0(x|X)[0-9a-fA-F]([0-9a-fA-F']*[0-9a-fA-F])?)|(0(b|B)[01]([01']*[01])?)|(([0-9]([0-9']*[0-9])?\\.?[0-9]*([0-9']*[0-9])?)|(\\.[0-9]([0-9']*[0-9])?))((e|E)(\\+|-)?[0-9]([0-9']*[0-9])?)?)(L|l|UL|ul|u|U|F|f|ll|LL|ull|ULL)?\\b",
+					"name": "constant.numeric.capl"
+				}
+			]
+		},
+		
+		"operators": {
+			"patterns": [
+				{
+					"match": "--",
+					"name": "keyword.operator.decrement.capl"
+				},
+				{
+					"match": "\\+\\+",
+					"name": "keyword.operator.increment.capl"
+				},
+				{
+					"match": "%=|\\+=|-=|\\*=|(?<!\\()/=",
+					"name": "keyword.operator.assignment.compound.capl"
+				},
+				{
+					"match": "&=|\\^=|<<=|>>=|\\|=",
+					"name": "keyword.operator.assignment.compound.bitwise.capl"
+				},
+				{
+					"match": "<<|>>",
+					"name": "keyword.operator.bitwise.shift.capl"
+				},
+				{
+					"match": "!=|<=|>=|==|<|>",
+					"name": "keyword.operator.comparison.capl"
+				},
+				{
+					"match": "&&|!|\\|\\|",
+					"name": "keyword.operator.logical.capl"
+				},
+				{
+					"match": "&|\\||\\^|~",
+					"name": "keyword.operator.capl"
+				},
+				{
+					"match": "=",
+					"name": "keyword.operator.assignment.capl"
+				},
+				{
+					"match": "%|\\*|/|-|\\+",
+					"name": "keyword.operator.capl"
+				},
+				{
+					"begin": "\\?",
+					"beginCaptures": {
+						"0": {
+							"name": "keyword.operator.ternary.capl"
+						}
+					},
+					"end": ":",
+					"applyEndPatternLast": true,
+					"endCaptures": {
+						"0": {
+							"name": "keyword.operator.ternary.capl"
+						}
+					},
+					"patterns": [
+						{
+							"include": "#access"
+						},
+						{
+							"include": "#c_function_call"
+						},
+						{
+							"include": "$base"
+						}
+					]
+				}
+			]
+		},
+		"storage_types":{
+			"patterns":[
+				{
+					"match": "\\b(byte|char|double|dword|enum|float|int|int64|long|qword|struct|void|word)\\b",
+					"name": "storage.type.capl"
+				}
+			]
+		},
+		"strings": {
+			"patterns":[
+				{
+					"begin": "\"",
+					"beginCaptures":{
+						"0":{
+							"name": "punctuation.definition.string.begin.capl"
+						}
+					},
+					"end": "(?<!\\\\)\"",
+					"endCaptures":{
+						"0":{
+							"name": "punctuation.definition.string.end.capl"
+						}
+					},
+					"name": "string.quoted.double.capl"
+					 
+				}
+			]
+		}
+
 	}
 }
