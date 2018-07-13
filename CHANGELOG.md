@@ -7,16 +7,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [0.0.2] - 2018-07-13
-
-### Changed
-
-- README.md file for more readability
-
-### Removed
-
-- vsc-extension-quick.md file as it is not needed
-
 ## [0.0.1] - 2018-07-13
 
 ### Added

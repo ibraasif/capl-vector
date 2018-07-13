@@ -25,4 +25,3 @@ Initial Release supporting basic syntax highlighting.
 ## Source Code
 
 You can find the source code for this extension here - [https://github.com/kmasif/capl-vector](https://github.com/kmasif/capl-vector)
-
