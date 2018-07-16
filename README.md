@@ -9,6 +9,7 @@ This extension allows you to use VS Code as code editor instead of built-in CAPL
 Right now the following feature is available with plan to add more in the near futre.
 
 * Syntax-highlighting
+* auto-completion
 
 ## Known Issues
 

@@ -8,12 +8,13 @@
         "vscode": "^1.25.0"
     },
     "categories": [
-        "Programming Languages"
+        "Programming Languages",
+        "Snippets"
     ],
     "contributes": {
         "languages": [{
             "id": "capl",
-            "aliases": ["Communication Access Programming Language (CAPL)", "capl"],
+            "aliases": ["Communication Access Programming Language (CAPL)", "capl", "CAPL"],
             "extensions": [".can",".cin"],
             "configuration": "./language-configuration.json"
         }],
@@ -21,6 +22,21 @@
             "language": "capl",
             "scopeName": "source.capl",
             "path": "./syntaxes/capl.tmLanguage.json"
-        }]
+        }],
+        "snippets": [
+            {
+                "language": "capl",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/kmasif/capl-vector.git"
+    },
+    "bugs": {
+        "url": "https://github.com/kmasif/capl-vector/issues",
+        "email": "dev+capl-vector@kmasif.com"
     }
+
 }

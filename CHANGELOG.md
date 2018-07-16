@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- Snippet Support : in .snippets/snippets.json
+- Repository & Bug information in package.json file
+
+### Changed
+
+- package.json file to reflect new additions
+- README.md file to reflect new features
+
 ## [0.0.1] - 2018-07-13
 
 ### Added
