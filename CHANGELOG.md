@@ -5,11 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [0.1.0] - 2018-07-16
 
 ### Added
 
 - Snippet Support : in .snippets/snippets.json
+- Keyword auto-completion for most keywords that are present in syntax highlighting
+- Code snippets for control structures and common functions
 - Repository & Bug information in package.json file
 
 ### Changed

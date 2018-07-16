@@ -1,0 +1,177 @@
+{
+  "if": {
+    "prefix": "if",
+    "body": "\nif (${1:/* condition */}) {\n\t${0:/* code */}\n}\n",
+    "description": "Code snippet for if()",
+    "scope": "source.capl"
+  },
+  "else": {
+    "prefix": "else",
+    "body": "\nelse\n{\n\t${0:/* code */}\n}\n",
+    "description": "Code snippet for else",
+    "scope": "source.capl"
+  },
+  "switch": {
+    "prefix": "switch",
+    "body": "\nswitch (${1:expression})\n{\n\tcase ${2:/* constant-expression */}:\n\t\t${3:/* code */}\n\t\tbreak;\n\n\tdefault:\n\t\tbreak;\n}",
+    "description": "Code snippet for switch",
+    "scope": "source.capl"
+  },
+  "do": {
+    "prefix": "do_",
+    "body": "\ndo\n{\n\t${0:/* code */}\n} while (${1:/* condition */});\n",
+    "description": "Code snippet for do while loop",
+    "scope": "source.capl"
+  },
+  "for": {
+    "prefix": "for",
+    "body": "\nfor(${1:int} ${2:i} = 0; $2 < ${3:count}; ${4:$2++})\n{\n\t${0:/* code */}\n}\n",
+    "description": "Code snippet for for loop",
+    "scope": "source.capl"
+  },
+  "forr": {
+    "prefix": "forr",
+    "body": "\nfor(int ${1:i} = ${2:length} - 1; $1 >= 0; ${3:$1--})\n{\n\t${0:/* code */}\n}\n",
+    "description": "Code snippet for reverse for loop",
+    "scope": "source.capl"
+  }, 
+  "while": {
+    "prefix": "while",
+    "body": "\nwhile(${1:/* condition */}){\n\t${2:/* code */}\n}\n",
+    "description": "Code snippet for while loop",
+    "scope": "source.capl"
+  },
+
+  "includes": {
+      "prefix":"includes",
+      "body":"includes\n{\n\t#include \"${1:/* filename.cin */}\" \n}\n",
+      "description": "Code snippet for includes",
+      "scope":"source.capl"
+  },
+  "variables": {
+      "prefix":"variables",
+      "body":"variables\n{\n\t${1:/* code */}\n}\n",
+      "description": "Code snippet for variables",
+      "scope":"source.capl"
+  },
+  "#include": {
+    "prefix":"#include",
+    "body":"#include \"${1:/* filename.cin */}\" \n",
+    "description": "Code snippet for #include",
+    "scope":"source.capl"
+  },
+  "byte": {
+    "prefix":"byte",
+    "body":"byte ${1:/* variable name */}; \n",
+    "description": "Code snippet for byte (unsigned, 1 Byte)",
+    "scope":"source.capl"
+  },
+  "word": {
+    "prefix":"word",
+    "body":"word ${1:/* variable name */}; \n",
+    "description": "Code snippet for word (unsigned, 2 Byte)",
+    "scope":"source.capl"
+  },
+  "dword": {
+    "prefix":"dword",
+    "body":"dword ${1:/* variable name */}; \n",
+    "description": "Code snippet for dword (unsigned, 4 Byte)",
+    "scope":"source.capl"
+  },
+  "int": {
+    "prefix":"int",
+    "body":"int ${1:/* variable name */}; \n",
+    "description": "Code snippet for int (signed, 2 Byte)",
+    "scope":"source.capl"
+  },
+  "long": {
+    "prefix":"long",
+    "body":"long ${1:/* variable name */}; \n",
+    "description": "Code snippet for long (signed, 4 Byte)",
+    "scope":"source.capl"
+  },
+  "int64": {
+    "prefix":"int64",
+    "body":"int64 ${1:/* variable name */}; \n",
+    "description": "Code snippet for int64 (signed, 8 Byte)",
+    "scope":"source.capl"
+  },
+  "qword": {
+    "prefix":"qword",
+    "body":"qword ${1:/* variable name */}; \n",
+    "description": "Code snippet for qword (unsigned, 8 Byte)",
+    "scope":"source.capl"
+  },
+  "char": {
+    "prefix":"char",
+    "body":"char ${1:/* variable name */}; \n",
+    "description": "Code snippet for char (1 Byte)",
+    "scope":"source.capl"
+  },
+  "float": {
+    "prefix":"float",
+    "body":"float ${1:/* variable name */}; \n",
+    "description": "Code snippet for float (8 Byte)",
+    "scope":"source.capl"
+  },
+  "double": {
+    "prefix":"double",
+    "body":"double ${1:/* variable name */}; \n",
+    "description": "Code snippet for double (8 Byte)",
+    "scope":"source.capl"
+  },
+  "timer": {
+    "prefix":"timer",
+    "body":"timer ${1:/* variable name */}; \n",
+    "description": "Code snippet for timer",
+    "scope":"source.capl"
+  },
+  "msTimer": {
+    "prefix":"msTimer",
+    "body":"msTimer ${1:/* variable name */}; \n",
+    "description": "Code snippet for msTimer",
+    "scope":"source.capl"
+  },
+  "message": {
+    "prefix":"message",
+    "body":"message ${1:/* variable name */}; \n",
+    "description": "Code snippet for message",
+    "scope":"source.capl"
+  },
+
+  "on start":
+  {
+      "prefix":"on start",
+      "body":"on start\n{\n\t${1:/* code */}\n}\n",
+      "description": "code snippet for on start",
+      "scope":"source.capl"
+  },
+  "on prestart":
+  {
+      "prefix":"on preStart",
+      "body":"on preStart\n{\n\t${1:/* code */}\n}\n",
+      "description": "code snippet for on preStart",
+      "scope":"source.capl"
+  },
+  "on preStop":
+  {
+      "prefix":"on preStop",
+      "body":"on preStop\n{\n\t${1:/* code */}\n}\n",
+      "description": "code snippet for on preStop",
+      "scope":"source.capl"
+  },
+  "on timer":
+  {
+      "prefix":"on timer",
+      "body":"on timer ${1:timerName}\n{\n\t${0:/* code */}\n}\n",
+      "description": "code snippet for on timer",
+      "scope":"source.capl"
+  },
+  "on message":
+  {
+      "prefix":"on messsage",
+      "body":"on message ${1:messageName}\n{\n\t${0:/* code */}\n}\n",
+      "description": "code snippet for on message",
+      "scope":"source.capl"
+  }
+}
