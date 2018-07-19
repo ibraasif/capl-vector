@@ -102,7 +102,7 @@
 					"name":"keyword.object.signal.capl"
 				},
 				{
-					"match": "\\b(|testcase|testfunction)\\b",
+					"match": "\\b(export|testcase|testfunction)\\b",
 					"name": "keyword.other.test.capl"
 				}
 			]
