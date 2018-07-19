@@ -11,6 +11,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - These keywords are added to grammar: const, testcase, testfunction, phys, raw, raw64, rx, txrq, export
 - Autocompletion for testcase and testfunction
+- Disclaimer section in README.md
+
+### Changed
+
+- Rewrite README.md for clearer readability
 
 ## [0.1.0] - 2018-07-16
 
