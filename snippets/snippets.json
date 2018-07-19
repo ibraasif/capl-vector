@@ -173,5 +173,20 @@
       "body":"on message ${1:messageName}\n{\n\t${0:/* code */}\n}\n",
       "description": "code snippet for on message",
       "scope":"source.capl"
+  },
+  "testcase":
+  {
+      "prefix":"testcase",
+      "body":"testcase ${1:testCaseName}()\n{\n\t${0:/* code */}\n}\n",
+      "description": "code snippet for testcase",
+      "scope":"source.capl"
+  },
+  "testfunction":
+  {
+      "prefix":"testfunction",
+      "body":"testfunction ${1:testFunctionName}()\n{\n\t${0:/* code */}\n}\n",
+      "description": "code snippet for testfunction",
+      "scope":"source.capl"
   }
+
 }
