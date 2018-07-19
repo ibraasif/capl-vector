@@ -18,6 +18,9 @@
 			"include": "#operators"
 		},
 		{
+			"include": "#storage_modifiers"
+		},
+		{
 			"include": "#storage_types"
 		},
 		{
@@ -30,7 +33,7 @@
 		
 	],
 	"repository": {
-		"comments":{
+		"comments": {
 			"patterns": [
 				{
 					"begin": "/\\*",
@@ -75,7 +78,7 @@
 				}
 			]
 		},
-		"keywords":{
+		"keywords": {
 			"patterns":[
 				{
 					"match": "\\b(break|case|continue|default|do|else|for|if|return|switch|while)\\b",
@@ -93,6 +96,14 @@
 				{
 					"match": "\\b(msTimer|timer)\\b",
 					"name": "keyword.object.timer.capl"
+				},
+				{
+					"match":"\\b(phys|raw|raw64|rx|txrq)\\b",
+					"name":"keyword.object.signal.capl"
+				},
+				{
+					"match": "\\b(|testcase|testfunction)\\b",
+					"name": "keyword.other.test.capl"
 				}
 			]
 		},
@@ -175,7 +186,16 @@
 				}
 			]
 		},
-		"storage_types":{
+		"storage_modifiers": {
+			"patterns":[
+				{
+					"match": "\\b(const)\\b",
+					"name": "storage.modifier.capl"
+				}
+			]
+
+		},
+		"storage_types": {
 			"patterns":[
 				{
 					"match": "\\b(byte|char|double|dword|enum|float|int|int64|long|qword|struct|void|word)\\b",
