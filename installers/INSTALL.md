@@ -10,13 +10,12 @@ This folder contains the current and previous released packages for reference an
 
 | Name | Released Date |
 |:------:|:-------------:|
-| [capl-vector-0.1.0.vsix](https://github.com/kmasif/capl-vector/blob/master/installers/capl-vector-0.1.0.vsix) | 2018-07-15
-| [capl-vector-0.0.1.vsix](https://github.com/kmasif/capl-vector/blob/master/installers/capl-vector-0.0.1.vsix) | 2018-07-18
+| [capl-vector-0.1.0.vsix](https://github.com/kmasif/capl-vector/blob/master/installers/capl-vector-0.1.0.vsix) | 2018-07-16
+| [capl-vector-0.0.1.vsix](https://github.com/kmasif/capl-vector/blob/master/installers/capl-vector-0.0.1.vsix) | 2018-07-13
 
 ## Unreleased Installer Package
 
 I plan to provide an unreleased installer package here if you want to try the unreleased features. When available, the unreleased installer `capl-vector-unreleased.vsix` can be downloaded from [here](https://github.com/kmasif/capl-vector/blob/master/installers/capl-vector-unreleased.vsix).
-
 
 Remember that you can always copy the whole source code and run it as an extension. To do this:
 
