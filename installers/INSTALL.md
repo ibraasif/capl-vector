@@ -15,7 +15,7 @@ This folder contains the current and previous released packages for reference an
 
 ## Unreleased Installer Package
 
-I plan to provide an unreleased installer package here if you want to try the unreleased features. When available, the unreleased installer `capl-vector-unreleased.vsix` can be downloaded from [here](https://github.com/kmasif/capl-vector/blob/master/installers/capl-vector-unreleased.vsix).
+I plan to provide an unreleased installer package here if you want to try the unreleased features. When available, the unreleased installer `capl-vector-unreleased.vsix` can be downloaded from [here](https://github.com/kmasif/capl-vector/blob/master/installers/capl-vector-unreleased.vsix). **Not Available Now**
 
 Remember that you can always copy the whole source code and run it as an extension. To do this:
 

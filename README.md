@@ -18,6 +18,10 @@ Current Issues can be accessed at  [https://github.com/kmasif/capl-vector/issues
 
 ## Release Notes
 
+### 0.1.1
+
+Added more keywords.
+
 ### 0.1.0
 
 Added Keyword auto-completion and code snippets for common functions and control structures.
