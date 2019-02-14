@@ -13,11 +13,10 @@ export function activate(context: vscode.ExtensionContext) {
 	/* Custom CAPL completion providers registration */
 	let symbolsProvider = vscode.languages.registerCompletionItemProvider('capl', new SymbolsCompletionItemProvider());
 	context.subscriptions.push(symbolsProvider);
-	console.log("ACTIVATED")
 }
 
 export function deactivate() {
-	console.log("DEACTIVATED")
+	
 }
 
 
