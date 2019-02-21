@@ -2,7 +2,7 @@
     "name": "capl-vector",
     "displayName": "CAPL",
     "description": "Language Support for Vector CAPL Script in VS Code.",
-    "version": "0.1.1",
+    "version": "0.2.0",
     "publisher": "kmasif",
     "engines": {
         "vscode": "^1.25.0"
@@ -12,17 +12,28 @@
         "Snippets"
     ],
     "contributes": {
-        "languages": [{
-            "id": "capl",
-            "aliases": ["Communication Access Programming Language (CAPL)", "capl", "CAPL"],
-            "extensions": [".can",".cin"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "capl",
-            "scopeName": "source.capl",
-            "path": "./syntaxes/capl.tmLanguage.json"
-        }],
+        "languages": [
+            {
+                "id": "capl",
+                "aliases": [
+                    "Communication Access Programming Language (CAPL)",
+                    "capl",
+                    "CAPL"
+                ],
+                "extensions": [
+                    ".can",
+                    ".cin"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "capl",
+                "scopeName": "source.capl",
+                "path": "./syntaxes/capl.tmLanguage.json"
+            }
+        ],
         "snippets": [
             {
                 "language": "capl",
@@ -37,5 +48,21 @@
     "bugs": {
         "url": "https://github.com/kmasif/capl-vector/issues",
         "email": "dev+capl-vector@kmasif.com"
+    },
+    "activationEvents": [
+        "onLanguage:capl"
+    ],
+    "main": "./out/extension.js",
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install"
+    },
+    "devDependencies": {
+        "@types/node": "^10.12.18",
+        "tslint": "^5.11.1",
+        "typescript": "^3.2.4",
+        "vscode": "^1.1.27"
     }
 }
